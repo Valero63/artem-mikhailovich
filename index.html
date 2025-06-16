@@ -1,0 +1,120 @@
+<html> 
+<marquee> АРТЁМ МИХАЙЛОВИЧ ЛУЧШИЙ ПРЕПОДАВАТЕЛЬ ИНФОРМАТИКИ НА ВСЁМ СВЕТЕ СЛАВА АРТЁМУ МИХАЙЛОВИЧУ АНГЕЛА ХРАНИТЕЛЯ АРТЁМУ МИХАЙЛОВИЧУ АРТЁМ МИХАЙЛОВИЧ ФОРЕВА АРТЁМ МИХАЙЛОВИЧ САМЫЙ КРУТОЙ ИНФОРМАТИК ВО ВСЕХ МУЛЬТИВСЕЛЕННЫХ
+</marquee> 
+
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Спасибо, Артём Михайлович!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #e0f7fa);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 750px;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: fadeIn 2s ease;
+      z-index: 1;
+    }
+
+    .header {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 20px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #0077b6;
+    }
+
+    .heart {
+      font-size: 30px;
+      color: #ff6b6b;
+      animation: pulse 1.5s infinite;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes pulse {
+      0%, 100% {transform: scale(1);}
+      50% {transform: scale(1.2);}
+    }
+
+    .floating-heart {
+      position: fixed;
+      color: #ff6b81;
+      font-size: 24px;
+      animation: float 5s linear infinite;
+      top: -10%;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">Спасибо, Артём Михайлович!</div>
+    <div class="message">
+      Вы лучший преподаватель, спасибо вам большое, <span class="highlight">Артём Михайлович</span>.<br><br>
+      Мы вас любим и будем по вам скучать.
+      <div class="heart">❤️</div>
+    </div>
+  </div>
+
+  <!-- Сердечки -->
+  <script>
+    const createHeart = () => {
+      const heart = document.createElement("div");
+      heart.className = "floating-heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 16) + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      heart.innerText = "❤️";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    };
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
